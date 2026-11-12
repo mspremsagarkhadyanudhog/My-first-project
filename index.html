@@ -5,19 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>एम. एस. प्रेम सागर खाद्य उद्योग</title>
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: sans-serif; }
     body { background-color: #f9f6f0; color: #333; line-height: 1.6; }
-    header { background: linear-gradient(135deg, #2e7d32, #1b5e20); color: white; text-align: center; padding: 40px 20px; }
+    header { background: linear-gradient(135deg, #1b5e20, #2e7d32); color: white; text-align: center; padding: 35px 20px; }
     header h1 { font-size: 26px; margin-bottom: 8px; }
     header p { font-size: 16px; opacity: 0.9; }
     .container { max-width: 800px; margin: 20px auto; padding: 0 15px; }
-    .card { background: white; border-radius: 12px; padding: 25px; margin-bottom: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
-    h2 { color: #2e7d32; border-bottom: 2px solid #e8f5e9; padding-bottom: 8px; margin-bottom: 15px; font-size: 20px; }
-    .products { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px; }
-    .product-item { background: #fffdf7; border: 1px solid #f0e6d2; border-radius: 8px; padding: 15px; text-align: center; }
-    .product-item h3 { color: #d84315; margin-bottom: 5px; font-size: 18px; }
-    .btn-group { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px; }
-    .btn { flex: 1; text-align: center; padding: 12px 15px; border-radius: 8px; text-decoration: none; font-weight: bold; color: white; min-width: 140px; }
+    .card { background: white; border-radius: 12px; padding: 25px; margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.06); }
+    h2 { color: #2e7d32; border-bottom: 2px solid #e8f5e9; padding-bottom: 10px; margin-bottom: 15px; font-size: 22px; }
+    .products { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 15px; }
+    .product-item { background: #fffdf7; border: 1px solid #f0e6d2; border-radius: 10px; padding: 15px; text-align: center; }
+    .product-item img { width: 100%; max-width: 220px; height: 220px; object-fit: contain; border-radius: 8px; margin-bottom: 10px; }
+    .product-item h3 { color: #d84315; margin-bottom: 8px; font-size: 19px; }
+    .director-box { text-align: center; }
+    .director-box img { width: 140px; height: 140px; object-fit: cover; border-radius: 50%; border: 4px solid #2e7d32; margin: 10px 0; }
+    .btn-group { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px; justify-content: center; }
+    .btn { flex: 1; min-width: 150px; text-align: center; padding: 12px 15px; color: white; text-decoration: none; border-radius: 8px; font-weight: bold; }
     .btn-call { background-color: #2e7d32; }
     .btn-whatsapp { background-color: #25D366; }
     footer { text-align: center; padding: 20px; background: #222; color: #ccc; font-size: 14px; margin-top: 30px; }
@@ -31,39 +34,56 @@
   </header>
 
   <div class="container">
+    
+    <!-- हाम्रो बारेमा -->
     <div class="card">
       <h2>हाम्रो बारेमा</h2>
       <p><strong>एम. एस. प्रेम सागर खाद्य उद्योग</strong> विश्रामपुर-५, बारा जिल्लामा अवस्थित एक प्रतिष्ठित खाद्य उद्योग हो। हामी उच्च गुणस्तरको कच्चा पदार्थ प्रयोग गरी पूर्ण रूपमा स्वच्छ वातावरणमा शुद्ध मसला तथा बेसन उत्पादन गर्दछौं।</p>
     </div>
 
+    <!-- हाम्रा मुख्य उत्पादनहरू -->
     <div class="card">
       <h2>हाम्रा मुख्य उत्पादनहरू</h2>
       <div class="products">
+        
         <div class="product-item">
-          <h3>🌶️ शुद्ध मसला</h3>
-          <p>ताजा, सुगन्धित र मिसावटरहित विभिन्न प्रकारका गुणस्तरीय मसलाहरू।</p>
+          <img src="IMG-20250303-WA0015.jpg" alt="स्पेशल मःम मसला">
+          <h3>🌶️ स्पेशल मःम मसला</h3>
+          <p>स्वादिलो र सुगन्धित मःमको लागि विशेष रूपमा तयार पारिएको शुद्ध मसला।</p>
         </div>
+
+        <div class="product-item">
+          <img src="IMG-20250303-WA0013.jpg" alt="शाही गरम मसला">
+          <h3>🍛 शाही गरम मसला</h3>
+          <p>हरेक परिकारलाई शाही स्वाद र बास्ना दिने उच्च गुणस्तरको गरम मसला।</p>
+        </div>
+
         <div class="product-item">
           <h3>🌾 शुद्ध बेसन</h3>
-          <p>उत्कृष्ट चनाबाट तयार पारिएको मसिनो, ताजा र पौष्टिक बेसन।</p>
+          <p>उच्च गुणस्तरको चनाबाट तयार पारिएको शुद्ध र पौष्टिक बेसन।</p>
         </div>
+
       </div>
     </div>
 
-    <div class="card">
-      <h2>सम्पर्क र ठेगाना</h2>
-      <p><strong>📍 ठेगाना:</strong> विश्रामपुर-५, बारा जिल्ला, नेपाल</p>
-      <p><strong>📞 फोन नम्बर:</strong> +977 9763563348 (९७६३५६३३४८)</p>
-      <p><strong>💬 WhatsApp नम्बर:</strong> +977 9845190919 (९८४५१९०९१९)</p>
+    <!-- डाइरेक्टरको परिचय -->
+    <div class="card director-box">
+      <h2>सञ्चालक / डाइरेक्टर</h2>
+      <img src="20260929_114630.jpg" alt="सन्देश रौनियार">
+      <h3 style="font-size: 21px; margin-top: 5px;">सन्देश रौनियार (Sandesh Rauniyar)</h3>
+      <p style="color: #555; font-weight: bold;">प्रबन्ध निर्देशक (Managing Director)</p>
+      <p style="margin-top: 5px;">ठेगाना: विश्रामपुर-५, बारा, नेपाल</p>
+      
       <div class="btn-group">
-        <a href="tel:+9779763563348" class="btn btn-call">📞 सिधै फोन गर्नुहोस्</a>
-        <a href="https://wa.me/9779845190919" class="btn btn-whatsapp">💬 WhatsApp मा अर्डर गर्नुहोस्</a>
+        <a href="tel:+9779845190919" class="btn btn-call">📞 फोन: ९८४५१९०९१९</a>
+        <a href="https://wa.me" class="btn btn-whatsapp">💬 WhatsApp मेसेज</a>
       </div>
     </div>
+
   </div>
 
   <footer>
-    <p>&copy; २०२६ एम. एस. प्रेम सागर खाद्य उद्योग | विश्रामपुर-५, बारा जिल्ला</p>
+    <p>&copy; २०२६ एम. एस. प्रेम सागर खाद्य उद्योग। सर्वाधिकार सुरक्षित।</p>
   </footer>
 
 </body>
