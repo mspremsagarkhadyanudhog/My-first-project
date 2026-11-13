@@ -1,93 +1,380 @@
 <!DOCTYPE html>
 <html lang="ne">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>एम. एस. प्रेम सागर खाद्य उद्योग</title>
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; font-family: sans-serif; }
-    body { background-color: #f9f6f0; color: #333; line-height: 1.6; }
-    header { background: linear-gradient(135deg, #1b5e20, #2e7d32); color: white; text-align: center; padding: 35px 20px; }
-    header h1 { font-size: 26px; margin-bottom: 8px; }
-    header p { font-size: 16px; opacity: 0.9; }
-    .container { max-width: 800px; margin: 20px auto; padding: 0 15px; }
-    .card { background: white; border-radius: 12px; padding: 25px; margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.06); }
-    h2 { color: #2e7d32; border-bottom: 2px solid #e8f5e9; padding-bottom: 10px; margin-bottom: 15px; font-size: 22px; }
-    .products { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 15px; }
-    .product-item { background: #fffdf7; border: 1px solid #f0e6d2; border-radius: 10px; padding: 15px; text-align: center; }
-    .product-item img { width: 100%; max-width: 220px; height: 220px; object-fit: contain; border-radius: 8px; margin-bottom: 10px; }
-    .product-item h3 { color: #d84315; margin-bottom: 8px; font-size: 19px; }
-    .director-box { text-align: center; }
-    .director-box img { width: 140px; height: 140px; object-fit: cover; border-radius: 50%; border: 4px solid #2e7d32; margin: 10px 0; }
-    .btn-group { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px; justify-content: center; }
-    .btn { flex: 1; min-width: 150px; text-align: center; padding: 12px 15px; color: white; text-decoration: none; border-radius: 8px; font-weight: bold; }
-    .btn-call { background-color: #2e7d32; }
-    .btn-whatsapp { background-color: #25D366; }
-    footer { text-align: center; padding: 20px; background: #222; color: #ccc; font-size: 14px; margin-top: 30px; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>एम. एस. प्रेम सागर खाद्य उद्योग | M. S. Prem Sagar Khadya Udyog</title>
+    <!-- Google Fonts & FontAwesome Icons -->
+    <link href="https://googleapis.com" rel="stylesheet">
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <style>
+        :root {
+            --primary-green: #064e3b;
+            --medium-green: #15803d;
+            --light-green: #f0fdf4;
+            --gold-accent: #d97706;
+            --bg-color: #f8fafc;
+            --text-dark: #1e293b;
+            --text-muted: #475569;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-green) 0%, var(--medium-green) 100%);
+            color: white;
+            text-align: center;
+            padding: 45px 20px 60px;
+            border-bottom-left-radius: 32px;
+            border-bottom-right-radius: 32px;
+            box-shadow: 0 10px 25px rgba(6, 78, 59, 0.2);
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 5px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin-bottom: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .hero h1 {
+            font-size: 1.85rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .hero h2 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #fde68a;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1rem;
+            opacity: 0.92;
+            margin-bottom: 24px;
+        }
+
+        .hero-btns {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .btn-gold {
+            background-color: var(--gold-accent);
+            color: white;
+            padding: 10px 22px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            box-shadow: 0 4px 12px rgba(217, 119, 6, 0.35);
+            transition: 0.2s;
+        }
+
+        .btn-outline {
+            border: 1.5px solid white;
+            color: white;
+            padding: 9px 22px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: 0.2s;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 580px;
+            margin: -28px auto 30px;
+            padding: 0 16px;
+        }
+
+        /* Card Box */
+        .card {
+            background: white;
+            border-radius: 20px;
+            padding: 24px;
+            margin-bottom: 22px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e2e8f0;
+        }
+
+        .section-title {
+            color: var(--primary-green);
+            font-size: 1.35rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title::before {
+            content: '';
+            width: 5px;
+            height: 24px;
+            background: var(--gold-accent);
+            border-radius: 4px;
+        }
+
+        /* 3 Mini Feature Boxes */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-top: 18px;
+            text-align: center;
+        }
+
+        .feature-item {
+            background: var(--light-green);
+            padding: 14px 8px;
+            border-radius: 14px;
+            border: 1px solid #bbf7d0;
+        }
+
+        .feature-item i {
+            color: var(--medium-green);
+            font-size: 1.4rem;
+            margin-bottom: 6px;
+        }
+
+        .feature-item span {
+            display: block;
+            font-size: 0.82rem;
+            font-weight: 700;
+            color: var(--primary-green);
+        }
+
+        /* Horizontal Product Cards */
+        .product-card {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 14px;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+        }
+
+        .product-img {
+            width: 105px;
+            height: 105px;
+            object-fit: cover;
+            border-radius: 12px;
+            border: 1px solid #f1f5f9;
+            flex-shrink: 0;
+        }
+
+        .product-info {
+            flex: 1;
+        }
+
+        .product-title {
+            color: #b91c1c;
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-bottom: 2px;
+        }
+
+        .product-sub {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--gold-accent);
+            margin-bottom: 4px;
+        }
+
+        .product-desc {
+            color: var(--text-muted);
+            font-size: 0.88rem;
+            line-height: 1.4;
+            margin-bottom: 10px;
+        }
+
+        .wa-order-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #25D366;
+            color: white;
+            text-decoration: none;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.82rem;
+            font-weight: 600;
+        }
+
+        /* Director Profile Card */
+        .director-card {
+            padding: 0;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .director-header {
+            background: linear-gradient(135deg, var(--primary-green), var(--medium-green));
+            height: 95px;
+            position: relative;
+        }
+
+        .director-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid white;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            margin-top: -60px;
+            background: white;
+            position: relative;
+            z-index: 2;
+        }
+
+        .director-body {
+            padding: 14px 22px 24px;
+        }
+
+        .director-badge {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--medium-green);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
+
+        .director-name {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+
+        .director-role {
+            color: var(--gold-accent);
+            font-weight: 600;
+            font-size: 0.95rem;
+            margin-bottom: 6px;
+        }
+
+        .director-address {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+
+        /* 2x2 Contact Grid */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .contact-tile {
+            background: #f8fafc;
+            border: 1.5px solid #cbd5e1;
+            border-radius: 14px;
+            padding: 14px 10px;
+            text-decoration: none;
+            color: var(--text-dark);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: 0.2s;
+        }
+
+        .contact-tile:hover {
+            border-color: var(--medium-green);
+            background: var(--light-green);
+        }
+
+        .contact-tile i {
+            font-size: 1.5rem;
+            margin-bottom: 6px;
+        }
+
+        .icon-call { color: var(--primary-green); }
+        .icon-wa { color: #25D366; }
+        .icon-mail { color: #2563eb; }
+        .icon-map { color: #dc2626; }
+
+        .tile-label {
+            font-weight: 700;
+            font-size: 0.95rem;
+        }
+
+        .tile-sub {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            word-break: break-all;
+        }
+
+        /* Save Contact Button */
+        .save-contact-btn {
+            width: 100%;
+            background: var(--primary-green);
+            color: white;
+            border: none;
+            padding: 14px;
+            border-radius: 14px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            box-shadow: 0 4px 12px rgba(6, 78, 59, 0.25);
+        }
+
+        .save-contact-btn:hover {
+            background: var(--medium-green);
+        }
+
+        /* Footer */
+        footer {
+            background: #0f172a;
+            color: #cbd5e1;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.85rem;
+            border-radius: 16px;
+        }
+
+        @media (max-width: 400px) {
+            .product-card {
+                flex-direction: column;
+                text-align: center;
+            }
+            .product-img {
+                width: 140px;
+                height: 140px;
+            }
+        }
+    </style>
 </head>
 <body>
 
-  <header>
-    <h1>एम. एस. प्रेम सागर खाद्य उद्योग</h1>
-    <p>शुद्ध, ताजा र गुणस्तरीय खाद्यान्नको भरपर्दो नाम</p>
-  </header>
-
-  <div class="container">
-    
-    <!-- हाम्रो बारेमा -->
-    <div class="card">
-      <h2>हाम्रो बारेमा</h2>
-      <p><strong>एम. एस. प्रेम सागर खाद्य उद्योग</strong> विश्रामपुर-५, बारा जिल्लामा अवस्थित एक प्रतिष्ठित खाद्य उद्योग हो। हामी उच्च गुणस्तरको कच्चा पदार्थ प्रयोग गरी पूर्ण रूपमा स्वच्छ वातावरणमा शुद्ध मसला तथा बेसन उत्पादन गर्दछौं।</p>
-    </div>
-
-    <!-- हाम्रा मुख्य उत्पादनहरू -->
-    <div class="card">
-      <h2>हाम्रा मुख्य उत्पादनहरू</h2>
-      <div class="products">
-        
-        <div class="product-item">
-          <img src="IMG-20250303-WA0015.jpg" alt="स्पेशल मःम मसला">
-          <h3>🌶️ स्पेशल मःम मसला</h3>
-          <p>स्वादिलो र सुगन्धित मःमको लागि विशेष रूपमा तयार पारिएको शुद्ध मसला।</p>
-        </div>
-
-        <div class="product-item">
-          <img src="IMG-20250303-WA0013.jpg" alt="शाही गरम मसला">
-          <h3>🍛 शाही गरम मसला</h3>
-          <p>हरेक परिकारलाई शाही स्वाद र बास्ना दिने उच्च गुणस्तरको गरम मसला।</p>
-        </div>
-
-        <div class="product-item">
-          <h3>🌾 शुद्ध बेसन</h3>
-          <p>उच्च गुणस्तरको चनाबाट तयार पारिएको शुद्ध र पौष्टिक बेसन।</p>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- डाइरेक्टरको परिचय -->
-    <div class="card director-box">
-      <h2>सञ्चालक / डाइरेक्टर</h2>
-      <img src="20260929_114630.jpg" alt="सन्देश रौनियार">
-      <h3 style="font-size: 21px; margin-top: 5px;">सन्देश रौनियार (Sandesh Rauniyar)</h3>
-      <p style="color: #555; font-weight: bold;">प्रबन्ध निर्देशक (Managing Director)</p>
-      <p style="margin-top: 5px;">ठेगाना: विश्रामपुर-५, बारा, नेपाल</p>
-      
-    
-      <div class="btn-group">
-        <a href="tel:+9779845190919" class="btn btn-call">📞 फोन: ९८४५१९०९१९</a>
-        <a href="https://wa.me/9779845190919" class="btn btn-whatsapp">💬 WhatsApp मेसेज</a>
-        <!-- इमेल एड्रेस देखिने बटन -->
-<a href="mailto:mspremsagarkhadyaudyog@gmail.com" 
-   style="display: block; background-color: #1976D2; color: white; text-align: center; padding: 14px 10px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 14px; margin-top: 12px; font-family: sans-serif; word-break: break-all;">
-   ✉️ mspremsagarkhadyaudyog@gmail.com
-</a>
-
-
-  <footer>
-    <p>&copy; २०२६ एम. एस. प्रेम सागर खाद्य उद्योग। सर्वाधिकार सुरक्षित।</p>
-  </footer>
-
-</body>
-</html>
+    <header class="hero">
