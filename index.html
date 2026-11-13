@@ -1,467 +1,57 @@
 <!DOCTYPE html>
 <html lang="ne">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>एम. एस. प्रेम सागर खाद्य उद्योग | M. S. Prem Sagar Khadya Udyog</title>
-    <link href="https://googleapis.com" rel="stylesheet">
-    <link rel="stylesheet" href="https://cloudflare.com">
-    <style>
-        :root {
-            --primary-green: #064e3b;
-            --medium-green: #15803d;
-            --light-green: #f0fdf4;
-            --gold-accent: #d97706;
-            --bg-color: #f8fafc;
-            --text-dark: #1e293b;
-            --text-muted: #475569;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Noto Sans Devanagari', sans-serif;
-            scroll-behavior: smooth;
-        }
-
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-dark);
-            line-height: 1.6;
-        }
-
-        .hero {
-            background: linear-gradient(135deg, var(--primary-green) 0%, var(--medium-green) 100%);
-            color: white;
-            text-align: center;
-            padding: 45px 20px 60px;
-            border-bottom-left-radius: 32px;
-            border-bottom-right-radius: 32px;
-            box-shadow: 0 10px 25px rgba(6, 78, 59, 0.2);
-        }
-
-        .hero-badge {
-            display: inline-block;
-            background: rgba(255, 255, 255, 0.15);
-            padding: 5px 16px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            margin-bottom: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-        }
-
-        .hero h1 {
-            font-size: 1.85rem;
-            font-weight: 700;
-            margin-bottom: 4px;
-        }
-
-        .hero h2 {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: #fde68a;
-            margin-bottom: 10px;
-        }
-
-        .hero p {
-            font-size: 1rem;
-            opacity: 0.92;
-            margin-bottom: 24px;
-        }
-
-        .hero-btns {
-            display: flex;
-            justify-content: center;
-            gap: 12px;
-            flex-wrap: wrap;
-        }
-
-        .btn-gold {
-            background-color: var(--gold-accent);
-            color: white;
-            padding: 10px 22px;
-            border-radius: 25px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.95rem;
-            box-shadow: 0 4px 12px rgba(217, 119, 6, 0.35);
-            transition: 0.2s;
-        }
-
-        .btn-outline {
-            border: 1.5px solid white;
-            color: white;
-            padding: 9px 22px;
-            border-radius: 25px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.95rem;
-            transition: 0.2s;
-        }
-
-        .container {
-            max-width: 580px;
-            margin: -28px auto 30px;
-            padding: 0 16px;
-        }
-
-        .card {
-            background: white;
-            border-radius: 20px;
-            padding: 24px;
-            margin-bottom: 22px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-            border: 1px solid #e2e8f0;
-        }
-
-        .section-title {
-            color: var(--primary-green);
-            font-size: 1.35rem;
-            font-weight: 700;
-            margin-bottom: 16px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .section-title::before {
-            content: '';
-            width: 5px;
-            height: 24px;
-            background: var(--gold-accent);
-            border-radius: 4px;
-        }
-
-        .features {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
-            margin-top: 18px;
-            text-align: center;
-        }
-
-        .feature-item {
-            background: var(--light-green);
-            padding: 14px 8px;
-            border-radius: 14px;
-            border: 1px solid #bbf7d0;
-        }
-
-        .feature-item i {
-            color: var(--medium-green);
-            font-size: 1.4rem;
-            margin-bottom: 6px;
-        }
-
-        .feature-item span {
-            display: block;
-            font-size: 0.82rem;
-            font-weight: 700;
-            color: var(--primary-green);
-        }
-
-        .product-card {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            background: #ffffff;
-            border: 1px solid #e2e8f0;
-            border-radius: 16px;
-            padding: 14px;
-            margin-bottom: 16px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
-        }
-
-        .product-img {
-            width: 105px;
-            height: 105px;
-            object-fit: cover;
-            border-radius: 12px;
-            border: 1px solid #f1f5f9;
-            flex-shrink: 0;
-            background: #f0fdf4;
-        }
-
-        .product-info {
-            flex: 1;
-        }
-
-        .product-title {
-            color: #b91c1c;
-            font-size: 1.15rem;
-            font-weight: 700;
-            margin-bottom: 2px;
-        }
-
-        .product-sub {
-            font-size: 0.8rem;
-            font-weight: 600;
-            color: var(--gold-accent);
-            margin-bottom: 4px;
-        }
-
-        .product-desc {
-            color: var(--text-muted);
-            font-size: 0.88rem;
-            line-height: 1.4;
-            margin-bottom: 10px;
-        }
-
-        .wa-order-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            background: #25D366;
-            color: white;
-            text-decoration: none;
-            padding: 6px 14px;
-            border-radius: 20px;
-            font-size: 0.82rem;
-            font-weight: 600;
-        }
-
-        .director-card {
-            padding: 0;
-            overflow: hidden;
-            text-align: center;
-        }
-
-        .director-header {
-            background: linear-gradient(135deg, var(--primary-green), var(--medium-green));
-            height: 95px;
-            position: relative;
-        }
-
-        .director-img {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid white;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-            margin-top: -60px;
-            background: white;
-            position: relative;
-            z-index: 2;
-        }
-
-        .director-body {
-            padding: 14px 22px 24px;
-        }
-
-        .director-badge {
-            font-size: 0.85rem;
-            font-weight: 700;
-            color: var(--medium-green);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 4px;
-        }
-
-        .director-name {
-            font-size: 1.4rem;
-            font-weight: 700;
-            color: var(--text-dark);
-        }
-
-        .director-role {
-            color: var(--gold-accent);
-            font-weight: 600;
-            font-size: 0.95rem;
-            margin-bottom: 6px;
-        }
-
-        .director-address {
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            margin-bottom: 20px;
-        }
-
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 12px;
-            margin-bottom: 16px;
-        }
-
-        .contact-tile {
-            background: #f8fafc;
-            border: 1.5px solid #cbd5e1;
-            border-radius: 14px;
-            padding: 14px 10px;
-            text-decoration: none;
-            color: var(--text-dark);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            transition: 0.2s;
-        }
-
-        .contact-tile:hover {
-            border-color: var(--medium-green);
-            background: var(--light-green);
-        }
-
-        .contact-tile i {
-            font-size: 1.5rem;
-            margin-bottom: 6px;
-        }
-
-        .icon-call { color: var(--primary-green); }
-        .icon-wa { color: #25D366; }
-        .icon-mail { color: #2563eb; }
-        .icon-map { color: #dc2626; }
-
-        .tile-label {
-            font-weight: 700;
-            font-size: 0.95rem;
-        }
-
-        .tile-sub {
-            font-size: 0.78rem;
-            color: var(--text-muted);
-            word-break: break-all;
-        }
-
-        .save-contact-btn {
-            width: 100%;
-            background: var(--primary-green);
-            color: white;
-            border: none;
-            padding: 14px;
-            border-radius: 14px;
-            font-size: 1rem;
-            font-weight: 700;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            box-shadow: 0 4px 12px rgba(6, 78, 59, 0.25);
-        }
-
-        .save-contact-btn:hover {
-            background: var(--medium-green);
-        }
-
-        footer {
-            background: #0f172a;
-            color: #cbd5e1;
-            text-align: center;
-            padding: 20px;
-            font-size: 0.85rem;
-            border-radius: 16px;
-        }
-
-        @media (max-width: 400px) {
-            .product-card {
-                flex-direction: column;
-                text-align: center;
-            }
-            .product-img {
-                width: 140px;
-                height: 140px;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>एम. एस. प्रेम सागर खाद्य उद्योग | M. S. Prem Sagar Khadya Udyog</title>
+<link href="https://googleapis.com" rel="stylesheet">
+<link rel="stylesheet" href="https://cloudflare.com">
+<style>
+:root{--primary-green:#064e3b;--medium-green:#15803d;--light-green:#f0fdf4;--gold-accent:#d97706;--bg-color:#f8fafc;--text-dark:#1e293b;--text-muted:#475569}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Noto Sans Devanagari',sans-serif;scroll-behavior:smooth}
+body{background-color:var(--bg-color);color:var(--text-dark);line-height:1.6}
+.hero{background:linear-gradient(135deg,var(--primary-green) 0%,var(--medium-green) 100%);color:#fff;text-align:center;padding:45px 20px 60px;border-bottom-left-radius:32px;border-bottom-right-radius:32px;box-shadow:0 10px 25px rgba(6,78,59,.2)}
+.hero-badge{display:inline-block;background:rgba(255,255,255,.15);padding:5px 16px;border-radius:20px;font-size:.85rem;margin-bottom:12px;border:1px solid rgba(255,255,255,.3)}
+.hero h1{font-size:1.85rem;font-weight:700;margin-bottom:4px}
+.hero h2{font-size:1.1rem;font-weight:600;color:#fde68a;margin-bottom:10px}
+.hero p{font-size:1rem;opacity:.92;margin-bottom:24px}
+.hero-btns{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.btn-gold{background-color:var(--gold-accent);color:#fff;padding:10px 22px;border-radius:25px;text-decoration:none;font-weight:600;font-size:.95rem;box-shadow:0 4px 12px rgba(217,119,6,.35)}
+.btn-outline{border:1.5px solid #fff;color:#fff;padding:9px 22px;border-radius:25px;text-decoration:none;font-weight:600;font-size:.95rem}
+.container{max-width:580px;margin:-28px auto 30px;padding:0 16px}
+.card{background:#fff;border-radius:20px;padding:24px;margin-bottom:22px;box-shadow:0 4px 20px rgba(0,0,0,.05);border:1px solid #e2e8f0}
+.section-title{color:var(--primary-green);font-size:1.35rem;font-weight:700;margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.section-title::before{content:'';width:5px;height:24px;background:var(--gold-accent);border-radius:4px}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:18px;text-align:center}
+.feature-item{background:var(--light-green);padding:14px 8px;border-radius:14px;border:1px solid #bbf7d0}
+.feature-item i{color:var(--medium-green);font-size:1.4rem;margin-bottom:6px}
+.feature-item span{display:block;font-size:.82rem;font-weight:700;color:var(--primary-green)}
+.product-card{display:flex;align-items:center;gap:16px;background:#fff;border:1px solid #e2e8f0;border-radius:16px;padding:14px;margin-bottom:16px;box-shadow:0 2px 10px rgba(0,0,0,.03)}
+.product-img{width:120px;height:120px;object-fit:contain;border-radius:12px;border:1px solid #f1f5f9;background:#fffbeb;padding:4px;flex-shrink:0}
+.product-info{flex:1}
+.product-title{color:#b91c1c;font-size:1.15rem;font-weight:700;margin-bottom:2px}
+.product-sub{font-size:.8rem;font-weight:600;color:var(--gold-accent);margin-bottom:4px}
+.product-desc{color:var(--text-muted);font-size:.88rem;line-height:1.4;margin-bottom:10px}
+.wa-order-btn{display:inline-flex;align-items:center;gap:6px;background:#25D366;color:#fff;text-decoration:none;padding:6px 14px;border-radius:20px;font-size:.82rem;font-weight:600}
+.director-card{padding:0;overflow:hidden;text-align:center}
+.director-header{background:linear-gradient(135deg,var(--primary-green),var(--medium-green));height:95px;position:relative}
+.director-img{width:120px;height:120px;border-radius:50%;object-fit:cover;border:4px solid #fff;box-shadow:0 4px 12px rgba(0,0,0,.15);margin-top:-60px;background:#fff;position:relative;z-index:2}
+.director-body{padding:14px 22px 24px}
+.director-badge{font-size:.85rem;font-weight:700;color:var(--medium-green);text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px}
+.director-name{font-size:1.35rem;font-weight:700;color:var(--text-dark)}
+.director-role{color:var(--gold-accent);font-weight:600;font-size:.92rem;margin-bottom:6px}
+.director-address{color:var(--text-muted);font-size:.9rem;margin-bottom:20px}
+.contact-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:16px}
+.contact-tile{background:#f8fafc;border:1.5px solid #cbd5e1;border-radius:14px;padding:14px 10px;text-decoration:none;color:var(--text-dark);display:flex;flex-direction:column;align-items:center}
+.contact-tile i{font-size:1.5rem;margin-bottom:6px}
+.icon-call{color:var(--primary-green)}.icon-wa{color:#25D366}.icon-mail{color:#2563eb}.icon-map{color:#dc2626}
+.tile-label{font-weight:700;font-size:.95rem}
+.tile-sub{font-size:.78rem;color:var(--text-muted);word-break:break-all}
+.save-contact-btn{width:100%;background:var(--primary-green);color:#fff;border:none;padding:14px;border-radius:14px;font-size:1rem;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px}
+footer{background:#0f172a;color:#cbd5e1;text-align:center;padding:20px;font-size:.85rem;border-radius:16px}
+@media(max-width:400px){.product-card{flex-direction:column;text-align:center}.product-img{width:150px;height:150px}}
+</style>
 </head>
-<body>
-
-    <header class="hero">
-        <div class="hero-badge"><i class="fas fa-seedling"></i> शुद्धता र विश्वासको प्रतीक</div>
-        <h1>एम. एस. प्रेम सागर खाद्य उद्योग</h1>
-        <h2>M. S. Prem Sagar Khadya Udyog</h2>
-        <p>नेपाली माटोको शुद्ध, पोषिलो र उच्च गुणस्तरीय चामल तथा खाद्य उत्पादनहरूको भरपर्दो नाम।</p>
-        <div class="hero-btns">
-                        <a href="#products" class="btn-gold"><i class="fas fa-box-open"></i> उत्पादनहरू हेर्नुहोस्</a>
-            <a href="#contact" class="btn-outline"><i class="fas fa-phone-alt"></i> सम्पर्क गर्नुहोस्</a>
-        </div>
-    </header>
-
-    <div class="container">
-        <section class="card">
-            <h3 class="section-title">हाम्रो परिचय</h3>
-            <p style="font-size: 0.95rem; color: var(--text-muted);">
-                <strong>एम. एस. प्रेम सागर खाद्य उद्योग</strong> आधुनिक प्रविधिमार्फत प्रशोधित स्वच्छ, स्वस्थ र स्वादिष्ट खाद्य वस्तुहरू उत्पादन तथा बिक्री वितरण गर्ने अग्रणी उद्योग हो। हामी किसानको खेतदेखि तपाईंको भान्सासम्म गुणस्तरमा कुनै सम्झौता नगरी उत्कृष्ट उत्पादन पुर्‍याउन प्रतिबद्ध छौँ।
-            </p>
-            <div class="features">
-                <div class="feature-item"><i class="fas fa-check-circle"></i><span>१००% शुद्ध</span></div>
-                <div class="feature-item"><i class="fas fa-award"></i><span>उच्च गुणस्तर</span></div>
-                <div class="feature-item"><i class="fas fa-truck"></i><span>छिटो डेलिभरी</span></div>
-            </div>
-        </section>
-
-        <section class="card" id="products">
-            <h3 class="section-title">हाम्रा प्रमुख उत्पादनहरू</h3>
-            <div class="product-card">
-                <img src="https://unsplash.com" alt="बासमती चामल" class="product-img">
-                <div class="product-info">
-                    <div class="product-title">स्पेशल बासमती चामल</div>
-                    <div class="product-sub">लामो दाना • मगमग बास्नादार</div>
-                    <p class="product-desc">दैनिक भोजन तथा विशेष चाडपर्वका लागि उपयुक्त, पकाउँदा लामो र नरम हुने उत्कृष्ट चामल।</p>
-                    <a href="https://wa.me" class="wa-order-btn" target="_blank"><i class="fab fa-whatsapp"></i> अर्डर गर्नुहोस्</a>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <img src="https://unsplash.com" alt="जिरा मसिनो चामल" class="product-img">
-                <div class="product-info">
-                    <div class="product-title">जिरा मसिनो चामल</div>
-                    <div class="product-sub">नरम र स्वादिष्ट • दैनिक प्रयोग</div>
-                    <p class="product-desc">आधुनिक मेसिनबाट सफा गरिएको, ढुङ्गा तथा कनिका रहित पौष्टिक जिरा मसिनो चामल।</p>
-                    <a href="https://wa.me" class="wa-order-btn" target="_blank"><i class="fab fa-whatsapp"></i> अर्डर गर्नुहोस्</a>
-                </div>
-            </div>
-
-            <div class="product-card" style="margin-bottom: 0;">
-                <img src="https://unsplash.com" alt="दाल" class="product-img">
-                <div class="product-info">
-                    <div class="product-title">शुद्ध दाल तथा गेडागुडी</div>
-                    <div class="product-sub">प्रोटिनयुक्त • अर्गानिक स्वाद</div>
-                    <p class="product-desc">रहर, मुसुरो र मासको छानिएको शुद्ध दाल तथा अन्य स्थानीय खाद्य सामग्रीहरू।</p>
-                    <a href="https://wa.me" class="wa-order-btn" target="_blank"><i class="fab fa-whatsapp"></i> अर्डर गर्नुहोस्</a>
-                </div>
-            </div>
-        </section>
-
-        <section class="card director-card" id="contact">
-            <div class="director-header"></div>
-            <img src="https://flaticon.com" alt="सञ्चालक" class="director-img">
-            <div class="director-body">
-                <div class="director-badge">सम्पर्क तथा व्यवस्थापन</div>
-                <div class="director-name">प्रेम सागर (सञ्चालक)</div>
-                <div class="director-role">प्रोप्राइटर | एम. एस. प्रेम सागर खाद्य उद्योग</div>
-                <div class="director-address"><i class="fas fa-map-marker-alt" style="color: #dc2626;"></i> वीरगंज, पर्सा, नेपाल</div>
-
-                <div class="contact-grid">
-                    <a href="tel:+9779800000000" class="contact-tile"><i class="fas fa-phone-alt icon-call"></i><span class="tile-label">फोन गर्नुहोस्</span><span class="tile-sub">+977 9800000000</span></a>
-                    <a href="https://wa.me" target="_blank" class="contact-tile"><i class="fab fa-whatsapp icon-wa"></i><span class="tile-label">WhatsApp</span><span class="tile-sub">मेसेज पठाउनुहोस्</span></a>
-                    <a href="mailto:info@mspku.com.np" class="contact-tile"><i class="fas fa-envelope icon-mail"></i><span class="tile-label">इमेल</span><span class="tile-sub">info@mspku.com.np</span></a>
-                    <a href="https://google.com" target="_blank" class="contact-tile"><i class="fas fa-map-marked-alt icon-map"></i><span class="tile-label">लोकेसन</span><span class="tile-sub">नक्सामा हेर्नुहोस्</span></a>
-                </div>
-
-                <button class="save-contact-btn" onclick="saveContact()"><i class="fas fa-address-book"></i> फोनमा नम्बर सेभ गर्नुहोस्</button>
-            </div>
-        </section>
-
-        <footer><p>&copy; 2026 एम. एस. प्रेम सागर खाद्य उद्योग। सर्वाधिकार सुरक्षित।</p></footer>
-    </div>
-
-    <script>
-        function saveContact() {
-            const v = "BEGIN:VCARD\nVERSION:3.0\nFN:M. S. Prem Sagar Khadya Udyog\nORG:M. S. Prem Sagar Khadya Udyog\nTEL;TYPE=CELL:+9779800000000\nEMAIL:info@mspku.com.np\nEND:VCARD";
-            const b = new Blob([v], { type: "text/vcard" });
-            const u = URL.createObjectURL(b);
-            const a = document.createElement("a");
-            a.href = u;
-            a.download = "MS_Prem_Sagar.vcf";
-            a.click();
-        }
-    </script>
-</body>
-</html>
-
 <body>
 <header class="hero">
 <div class="hero-badge"><i class="fas fa-mortar-pestle"></i> शुद्ध, ताजा र गुणस्तरीय खाद्यान्नको भरपर्दो नाम</div>
@@ -486,7 +76,7 @@
 <section class="card" id="products">
 <h3 class="section-title">हाम्रा मुख्य उत्पादनहरू</h3>
 <div class="product-card">
-<img src="momo-masala.jpg" onerror="this.src='https://flaticon.com'" alt="स्पेशल मःम मसला" class="product-img">
+<img src="20260929_114630.jpg" alt="स्पेशल मःम मसला" class="product-img">
 <div class="product-info">
 <div class="product-title">स्पेशल मःम मसला</div>
 <div class="product-sub">Rauniyar's MoMo Masala • ५०० ग्राम / ५० ग्राम</div>
@@ -495,7 +85,7 @@
 </div>
 </div>
 <div class="product-card">
-<img src="garam-masala.jpg" onerror="this.src='https://flaticon.com'" alt="शाही गरम मसला" class="product-img">
+<img src="https://flaticon.com" alt="शाही गरम मसला" class="product-img">
 <div class="product-info">
 <div class="product-title">शाही गरम मसला</div>
 <div class="product-sub">Rauniyar's Special Garam Masala</div>
@@ -504,7 +94,7 @@
 </div>
 </div>
 <div class="product-card" style="margin-bottom:0">
-<img src="besan.jpg" onerror="this.src='https://flaticon.com'" alt="शुद्ध बेसन" class="product-img">
+<img src="https://flaticon.com" alt="शुद्ध बेसन" class="product-img">
 <div class="product-info">
 <div class="product-title">शुद्ध बेसन</div>
 <div class="product-sub">१००% चनाको दालबाट निर्मित</div>
@@ -515,7 +105,7 @@
 </section>
 <section class="card director-card" id="contact">
 <div class="director-header"></div>
-<img src="director.jpg" onerror="this.src='https://flaticon.com'" alt="सन्देश रौनियार" class="director-img">
+<img src="https://flaticon.com" alt="सन्देश रौनियार" class="director-img">
 <div class="director-body">
 <div class="director-badge">सञ्चालक / डाइरेक्टर</div>
 <div class="director-name">सन्देश रौनियार (Sandesh Rauniyar)</div>
