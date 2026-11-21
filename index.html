@@ -393,7 +393,177 @@
       margin-top: 2px;
     }
 
-    /* फोन र WhatsApp छेउछाउ बटनहरू */
+
+    .quick-contact-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;    
     .quick-contact-row {
       display: grid;
       grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+    .gold-pill-btn {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1.5px solid var(--gold-mid);
+      border-radius: 50px;
+      padding: 10px 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: #ffffff;
+    }
+    .pill-icon {
+      width: 34px;
+      height: 34px;
+      min-width: 34px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #e5c158, #a67c16);
+      color: #0d100f;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.95rem;
+    }
+    .pill-text { display: flex; flex-direction: column; line-height: 1.2; overflow: hidden; }
+    .pill-title { font-size: 0.85rem; font-weight: 800; color: var(--gold-light); }
+    .pill-sub { font-size: 0.72rem; color: var(--text-muted); white-space: nowrap; }
+    .contact-list { display: flex; flex-direction: column; gap: 10px; margin-bottom: 18px; }
+    .contact-row-item {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--gold-border);
+      border-radius: 14px;
+      padding: 11px 14px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: #ffffff;
+      font-size: 0.84rem;
+    }
+    .contact-row-item i { color: var(--gold-light); font-size: 1.05rem; width: 20px; text-align: center; }
+    .contact-row-item span { word-break: break-all; color: var(--text-muted); }
+    .contact-row-item strong { color: #ffffff; font-weight: 600; }
+    .save-contact-btn {
+      width: 100%;
+      background: linear-gradient(135deg, #f3d778 0%, #d4af37 50%, #a67c16 100%);
+      color: #0d100f;
+      border: 1.5px solid #fff3c4;
+      padding: 14px;
+      border-radius: 50px;
+      font-size: 0.98rem;
+      font-weight: 800;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+    footer { text-align: center; padding: 14px 10px 6px; border-top: 1px solid rgba(212, 175, 55, 0.2); font-size: 0.8rem; color: #94a3b8; }
+    @media (max-width: 390px) { .products-grid { grid-template-columns: 1fr; } .product-card { flex-direction: row; align-items: center; text-align: left; gap: 12px; } .product-img-box { width: 80px; height: 80px; margin-bottom: 0; flex-shrink: 0; } .quick-contact-row { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <div class="main-wrapper">
+    <header class="hero">
+      <div class="top-nav">
+        <div class="brand-monogram">MS</div>
+        <div class="hero-badge"><i class="fas fa-crown"></i> १००% शुद्ध र ताजा</div>
+        <div style="width: 44px;"></div>
+      </div>
+      <h1>एम एस प्रेम सागर खाद्यान्न उद्योग</h1>
+      <h2>M S Prem Sagar Khadyan Udyog</h2>
+      <p>Rauniyar's ब्रान्डका शुद्ध मसला तथा पोषिलो बेसनको अग्रणी उत्पादक।</p>
+      <div class="hero-btns">
+        <a href="#products" class="btn-gold"><i class="fas fa-box-open"></i> उत्पादनहरू हेर्नुहोस्</a>
+        <a href="#contact" class="btn-outline"><i class="fas fa-phone-alt"></i> सम्पर्क गर्नुहोस्</a>
+      </div>
+    </header>
+
+    <section class="card">
+      <h3 class="section-title">हाम्रो बारेमा</h3>
+      <p class="about-desc"><strong>एम. एस. प्रेम सागर खाद्यान्न उद्योग</strong> विश्रामपुर-५, बारा जिल्लामा अवस्थित एक प्रतिष्ठित खाद्यान्न उद्योग हो। हामी उच्च गुणस्तरको कच्चा पदार्थ प्रयोग गरी पूर्ण रूपमा स्वच्छ वातावरणमा शुद्ध मसला तथा बेसन उत्पादन गर्दछौँ।</p>
+      <div class="features">
+        <div class="feature-item">
+          <svg class="feature-icon" viewBox="0 0 24 24"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+          <span>१००% शुद्ध</span>
+        </div>
+        <div class="feature-item">
+          <svg class="feature-icon" viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/><path d="m9 8 2 2 4-4"/></svg>
+          <span>उच्च गुणस्तर</span>
+        </div>
+        <div class="feature-item">
+          <svg class="feature-icon" viewBox="0 0 24 24"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></svg>
+          <span>छिटो डेलिभरी</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="products">
+      <h3 class="section-title">हाम्रा मुख्य उत्पादनहरू</h3>
+      <div class="products-grid">
+        <div class="product-card">
+          <div class="product-img-box"><img src="Momo masala .jpg" alt="Rauniyar's स्पेशल मःम मसला"></div>
+          <div>
+            <div class="product-title">स्पेशल मःम मसला</div>
+            <div class="product-sub">Rauniyar's MoMo Masala</div>
+            <a href="https://wa.me" class="wa-order-btn"><i class="fab fa-whatsapp"></i> अर्डर गर्नुहोस्</a>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-img-box"><img src="Sahi garam masala .jpg" alt="Rauniyar's शाही गरम मसला"></div>
+          <div>
+            <div class="product-title">शाही गरम मसला</div>
+            <div class="product-sub">Sahi Garam Masala</div>
+            <a href="https://wa.me" class="wa-order-btn"><i class="fab fa-whatsapp"></i> अर्डर गर्नुहोस्</a>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-img-box"><img src="Suddha besan .jpg" alt="शुद्ध बेसन"></div>
+          <div>
+            <div class="product-title">शुद्ध बेसन</div>
+            <div class="product-sub">१००% चनाको दालबाट निर्मित</div>
+            <a href="https://wa.me" class="wa-order-btn"><i class="fab fa-whatsapp"></i> अर्डर गर्नुहोस्</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="director-card" id="contact">
+      <div class="director-top">
+        <div class="director-img-ring"><img src="Sandesh Rauniyar .jpg" alt="सन्देश रौनियार" class="director-img"></div>
+        <div class="director-info">
+          <div class="director-badge">सञ्चालक / डाइरेक्टर</div>
+          <div class="director-name">सन्देश रौनियार (Sandesh Rauniyar)</div>
+          <div class="director-role">प्रबन्ध निर्देशक (Managing Director)</div>
+        </div>
+      </div>
+      <div class="quick-contact-row">
+        <a href="tel:+9779845190919" class="gold-pill-btn">
+          <div class="pill-icon"><i class="fas fa-phone-alt"></i></div>
+          <div class="pill-text"><span class="pill-title">फोन गर्नुहोस्</span><span class="pill-sub">९८४५१९०९१९</span></div>
+        </a>
+        <a href="https://wa.me" target="_blank" rel="noopener noreferrer" class="gold-pill-btn">
+          <div class="pill-icon"><i class="fab fa-whatsapp" style="font-size: 1.15rem;"></i></div>
+          <div class="pill-text"><span class="pill-title">WhatsApp</span><span class="pill-sub">+977 9845190919</span></div>
+        </a>
+      </div>
+      <div class="contact-list">
+        <a href="mailto:mspremsagarkhadyanudyog@gmail.com" class="contact-row-item"><i class="fas fa-envelope"></i><span><strong>Email:</strong> mspremsagarkhadyanudyog@gmail.com</span></a>
+        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="contact-row-item"><i class="fab fa-facebook"></i><span><strong>Facebook:</strong> एम. एस. प्रेम सागर खाद्यान्न उद्योग</span></a>
+        <a href="https://goo.gl" target="_blank" rel="noopener noreferrer" class="contact-row-item"><i class="fas fa-map-marker-alt"></i><span><strong>Location:</strong> विश्रामपुर-५, बारा, नेपाल</span></a>
+      </div>
+      <button class="save-contact-btn" onclick="saveContact()"><i class="fas fa-address-book"></i> फोनमा नम्बर सेभ गर्नुहोस्</button>
+    </section>
+
+    <footer>
+      <p>© २०२६ एम. एस. प्रेम सागर खाद्यान्न उद्योग। सर्वाधिकार सुरक्षित।</p>
+    </footer>
+  </div>
+  <script>
+    function saveContact(){const v="BEGIN:VCARD\nVERSION:3.0\nFN:Sandesh Rauniyar - M. S. Prem Sagar Khadyan Udyog\nORG:M. S. Prem Sagar Khadyan Udyog\nTITLE:Managing Director\nTEL;TYPE=CELL:+9779845190919\nEMAIL:mspremsagarkhadyanudyog@gmail.com\nADR:;;Vishrampur-5;Bara;;Nepal\nEND:VCARD";const b=new Blob([v],{type:"text/vcard"});const u=URL.createObjectURL(b);const a=document.createElement("a");a.href=u;a.download="Sandesh_Rauniyar_MSPKU.vcf";document.body.appendChild(a);a.click();document.body.removeChild(a)}
+  </script>
+</body>
+</html>
+
